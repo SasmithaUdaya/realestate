@@ -14,6 +14,6 @@ export const signup = async (req, res, next) =>
     }
     catch(error)
     {
-        next(error);
+        next(errorHandler(550, 'User is already exists!'));
     }
 };
